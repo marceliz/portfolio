@@ -1,21 +1,27 @@
 # portfolio
 Portfolio web app, it shows basic information from user and also the last tweets.
 
-Herramientas 🛠️
-Para la implementación del aplicativo se usaron las siguientes herramientas.
+Tools 🛠️
+What you’ll need for implementing this app 
 
 - JDK 11.0.11
 - Apache Maven 3.6.2
 - Postman 7.14.0
+- IntelliJ
 
-Despliegue 📋
-Para iniciar el proyecto es necesario seguir los siguientes pasos.
+Dependencies in project
+- org.twitter4j
+- junit
+- mysql
+- org.springframework.boot
 
-👊 Desde IDE Intellij
+Deployment 📋
+To Begin follow next steps
 
-- Desde la aplicación nos posicionamos en la clase principal. Esta clase está identificado por la anotación @SpringBootApplication.
-- Clic en PortfolioApplication.java ➜ Run as ➜ Java Application
-- Verificamos ingresando al link http://localhost:8081/app/
+- Import project with IntelliJ use GIT to clone code.
+- In app go to the main java class with anotation @SpringBootApplication
+- Click en PortfolioApplication.java ➜ Run as ➜ Java Application
+- Verify in your favorite browser with link http://localhost:8081/app/
 
 Autor ✒️
 Lizeth Marcela Gomez Ocampo
