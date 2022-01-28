@@ -16,3 +16,6 @@ Para iniciar el proyecto es necesario seguir los siguientes pasos.
 - Desde la aplicación nos posicionamos en la clase principal. Esta clase está identificado por la anotación @SpringBootApplication.
 - Clic en PortfolioApplication.java ➜ Run as ➜ Java Application
 - Verificamos ingresando al link http://localhost:8081/app/
+
+Autor ✒️
+Lizeth Marcela Gomez Ocampo
