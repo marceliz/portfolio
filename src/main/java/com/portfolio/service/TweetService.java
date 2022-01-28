@@ -2,7 +2,6 @@ package com.portfolio.service;
 
 import java.util.ArrayList;
 import java.util.List;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import twitter4j.ResponseList;
@@ -34,4 +33,5 @@ public class TweetService
         }
         return tweets;
     }
+
 }

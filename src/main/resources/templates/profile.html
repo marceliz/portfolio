@@ -18,7 +18,7 @@
         nav {
             float: left;
             width: 40%;
-            height: 700px; /* only for demonstration, should be removed */
+            height: 700px;
             background: #ccc;
             padding: 20px;
         }
@@ -34,7 +34,6 @@
             padding: 20px;
             width: 60%;
             background-color: #f1f1f1;
-            height: 700px; /* only for demonstration, should be removed */
         }
 
         /* Clear floats after the columns */
@@ -48,16 +47,18 @@
             border-radius: 15px;
             background: #FFFFFF;
             padding: 20px;
-            width: 500px;
-            height: 100px;
         }
 
         #rcorners5 {
             border-radius: 15px;
             background: #FFFFFF;
             padding: 20px;
-            width: 450px;
-            height: 400px;
+        }
+
+        .center {
+            margin: auto;
+            width: 60%;
+            padding: 10px;
         }
 
         /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
@@ -71,13 +72,15 @@
 </head>
 <body>
 
-<section>
+<section class="center">
     <nav>
         <section class="row newsFeed">
             <div class="col-sm-3">
                 <p>
                 <h4><span th:text="${portfolio.name}">NAME</span></h4>
-                @Ironhack
+                <img th:src="${portfolio.imagePath}" style="display: block; margin-bottom: 10px;"/>
+                @<span th:text="${portfolio.name}">Twitter</span>
+
                 </p>
             </div>
             <div class="col-sm-6">
@@ -97,9 +100,16 @@
         <ul>
             <li th:each="tweet : ${tweets}" style="list-style: none;">
                 <div class="tweet-container">
-                    <img th:src="${portfolio.imagePath}" style="display: block; margin-bottom: 10px;"/>
-                    <span th:text="${portfolio.name}">username</span>
-                    <p id="rcorners4" th:text="${tweet}">Tweet</p>
+                    <table style="width:100%" id="rcorners4">
+                        <tr>
+                            <td style="text-align: center; vertical-align: middle;">
+                                <img th:src="${portfolio.imagePath}" style="display: block; margin-bottom: 10px;"/>
+                                <h1></h1><span th:text="${portfolio.name}">username</span></h1>
+                            </td>
+                            <td><p  th:text="${tweet}" style="margin: 10px">Tweet</p></td>
+                        </tr>
+                    </table>
+                    <br>
                 </div>
             </li>
         </ul>

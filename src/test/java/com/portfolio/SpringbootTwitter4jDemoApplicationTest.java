@@ -79,7 +79,7 @@ public class SpringbootTwitter4jDemoApplicationTest
         TwitterFactory tf = new TwitterFactory(cb.build());
         Twitter twitter = tf.getInstance();
 
-        Status miStatus = twitter.updateStatus("El metaverso es la convergencia de dos ideas que han existido durante muchos años: la realidad virtual y una segunda vida digital.");//cambia el estado de twitter
+        Status miStatus = twitter.updateStatus("Second Simple Tweet for testing api...");//cambia el estado de twitter
         System.out.println("STATUS::::::"+miStatus.getText());
 
         System.out.println("USER2:::: "+twitter.getHomeTimeline().size());
