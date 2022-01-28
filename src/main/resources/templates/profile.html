@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://thymeleaf.org">
+<head>
+    <title>CSS Template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Create two columns/boxes that floats next to each other */
+        nav {
+            float: left;
+            width: 40%;
+            height: 700px; /* only for demonstration, should be removed */
+            background: #ccc;
+            padding: 20px;
+        }
+
+        /* Style the list inside the menu */
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        article {
+            float: left;
+            padding: 20px;
+            width: 60%;
+            background-color: #f1f1f1;
+            height: 700px; /* only for demonstration, should be removed */
+        }
+
+        /* Clear floats after the columns */
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        #rcorners4 {
+            border-radius: 15px;
+            background: #FFFFFF;
+            padding: 20px;
+            width: 500px;
+            height: 100px;
+        }
+
+        #rcorners5 {
+            border-radius: 15px;
+            background: #FFFFFF;
+            padding: 20px;
+            width: 450px;
+            height: 400px;
+        }
+
+        /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+        @media (max-width: 600px) {
+            nav, article {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<section>
+    <nav>
+        <section class="row newsFeed">
+            <div class="col-sm-3">
+                <p>
+                <h4><span th:text="${portfolio.name}">NAME</span></h4>
+                @Ironhack
+                </p>
+            </div>
+            <div class="col-sm-6">
+                <div class="panel panel-default">
+                    <div class= "panel-body">
+                        <p id="rcorners5" th:text="${portfolio.experience}">
+                            My Work Experience
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </nav>
+
+    <article>
+        <h1>TimeLine</h1>
+        <ul>
+            <li th:each="tweet : ${tweets}" style="list-style: none;">
+                <div class="tweet-container">
+                    <img th:src="${portfolio.imagePath}" style="display: block; margin-bottom: 10px;"/>
+                    <span th:text="${portfolio.name}">username</span>
+                    <p id="rcorners4" th:text="${tweet}">Tweet</p>
+                </div>
+            </li>
+        </ul>
+    </article>
+</section>
+</body>
+</html>
+
