@@ -11,7 +11,7 @@ Para la implementación del aplicativo se usaron las siguientes herramientas.
 Despliegue 📋
 Para iniciar el proyecto es necesario seguir los siguientes pasos.
 
-👊 Desde IDE Eclipse
+👊 Desde IDE Intellij
 
 - Desde la aplicación nos posicionamos en la clase principal. Esta clase está identificado por la anotación @SpringBootApplication.
 - Clic en PortfolioApplication.java ➜ Run as ➜ Java Application
