@@ -23,5 +23,7 @@ To Begin follow next steps
 - Click en PortfolioApplication.java ➜ Run as ➜ Java Application
 - Verify in your favorite browser with link http://localhost:8081/app/
 
+Time expended: 14 hrs
+
 Autor ✒️
 Lizeth Marcela Gomez Ocampo
