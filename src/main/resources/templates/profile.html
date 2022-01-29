@@ -18,8 +18,8 @@
         nav {
             float: left;
             width: 40%;
-            height: 700px;
-            background: #ccc;
+            height: 900px;
+            background: #F7F9F9;
             padding: 20px;
         }
 
@@ -34,6 +34,7 @@
             padding: 20px;
             width: 60%;
             background-color: #f1f1f1;
+            height: 900px;
         }
 
         /* Clear floats after the columns */
@@ -70,7 +71,7 @@
         }
     </style>
 </head>
-<body>
+<body style="background: #1A8DDA">
 
 <section class="center">
     <nav>
@@ -80,14 +81,13 @@
                 <h4><span th:text="${portfolio.name}">NAME</span></h4>
                 <img th:src="${portfolio.imagePath}" style="display: block; margin-bottom: 10px;"/>
                 @<span th:text="${portfolio.name}">Twitter</span>
-
                 </p>
             </div>
             <div class="col-sm-6">
                 <div class="panel panel-default">
                     <div class= "panel-body">
+                        <h4>My Work Experience</h4>
                         <p id="rcorners5" th:text="${portfolio.experience}">
-                            My Work Experience
                         </p>
                     </div>
                 </div>

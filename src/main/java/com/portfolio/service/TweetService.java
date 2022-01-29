@@ -12,6 +12,7 @@ import twitter4j.TwitterException;
 @Service
 public class TweetService
 {
+    int LIMIT_TWEETS=5;
     private Twitter twitter;
 
     public TweetService(Twitter twitter) {
@@ -20,12 +21,18 @@ public class TweetService
 
     public List<String> getLatestTweets()
     {
+        int tweetCounter=0;
         List<String> tweets = new ArrayList<>();
         try {
             ResponseList<Status> homeTimeline = twitter.getHomeTimeline();
             for (Status status : homeTimeline)
             {
-                tweets.add(status.getText());
+                if(tweetCounter<LIMIT_TWEETS) {
+                    tweets.add(status.getText());
+                }else{
+                    break;
+                }
+                tweetCounter++;
             }
         }
         catch (TwitterException e) {
